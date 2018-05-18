@@ -26,9 +26,16 @@ func resourcePacketSpotMarketRequest() *schema.Resource {
 				ForceNew: true,
 			},
 			"facilities": &schema.Schema{
-				Type:     schema.TypeString,
+				Type:     schema.TypeList,
 				Required: true,
 				ForceNew: true,
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
+			"hostnames": &schema.Schema{
+				Type:     schema.TypeList,
+				Required: true,
+				ForceNew: true,
+				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
 			"devices_max": &schema.Schema{
 				Type:     schema.TypeInt,
@@ -41,41 +48,20 @@ func resourcePacketSpotMarketRequest() *schema.Resource {
 				Required: true,
 				ForceNew: true,
 			},
-			"devices": &schema.Schema{
-				Type:     schema.TypeList,
-				Computed: true,
-				Elem:     &schema.Schema{Type: schema.TypeString},
-			},
 			"end_at": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-
-			"plan": &schema.Schema{
-				Type:     schema.TypeString,
+			"max_bid_price": &schema.Schema{
+				Type:     schema.TypeFloat,
 				Required: true,
+				ForceNew: true,
 			},
-
-			"billing_cycle": &schema.Schema{
-				Type:     schema.TypeString,
+			"devices": &schema.Schema{
+				Type:     schema.TypeList,
 				Computed: true,
-				Optional: true,
-			},
-
-			"state": &schema.Schema{
-				Type:     schema.TypeString,
-				Computed: true,
-			},
-
-			"locked": &schema.Schema{
-				Type:     schema.TypeBool,
-				Optional: true,
-			},
-
-			"updated": &schema.Schema{
-				Type:     schema.TypeString,
-				Computed: true,
+				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
 		},
 	}
