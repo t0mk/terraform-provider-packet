@@ -1,3 +1,7 @@
+This is a fork of terraform-provider-packet, which was reworked into [terraform-provider-equinix](https://github.com/equinix/terraform-provider-equinix) after Packet was acquired by Equinix and rebranded as Equinix Metal. The provider code was copied, unfortunately effectively removing record (git history) of my ([t0mk](https://github.com/t0mk/)'s) contributions (which I'm fine with, no grudge there). 
+
+This repo is just a copy of the old Packet provider (by 2023 deprecated and in future probably removed), so that I can prove the open-source work that I've done on terraform-provider-packet. I was the largest contributor to the project between 2017 and 2021.
+
 # Equinix Metal Terraform Provider
 
 [![End of Life](https://img.shields.io/badge/Stability-EndOfLife-black.svg)](end-of-life-statement.md#end-of-life-statements)
